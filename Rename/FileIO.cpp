@@ -2,9 +2,9 @@
 #include <string>
 #include <iostream>
 using namespace std;
-extern order;
+extern Order order;
 int i=0;
-void FileIO::ListDir(LPCTSTR lpFileName) //éåŸåº“ä¸­å‡½æ•° å·²ç»è¿‡ä¿®æ”¹
+void FileIO::ListDir(LPCTSTR lpFileName) //·ÇÔ­¿âÖĞº¯Êı ÒÑ¾­¹ıĞŞ¸Ä
 {
     WIN32_FIND_DATA FileData;
     HANDLE hSearch;
@@ -15,7 +15,9 @@ void FileIO::ListDir(LPCTSTR lpFileName) //éåŸåº“ä¸­å‡½æ•° å·²ç»è¿‡ä¿®æ”¹
             continue;
         else
         {
+            cout << FileData.cFileName << endl;
             order.name[i]=FileData.cFileName;
+            ++order.length;
             ++i;
         }
 
