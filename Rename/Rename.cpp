@@ -24,16 +24,16 @@ int main()
     cin>>ending;
     szPath=szPath+"\\";
 
-    for (int i = 1; i <=order.length; ++i)
+    for (int i = 1; i <= order.length; ++i)
     {
         string temp;
-        temp=to_string(i);
-        oldname=szPath+order.name[i-1];
-        newname=szPath+temp+"."+ending;
+        temp = to_string(i);
+        oldname = szPath + order.name[i - 1];
+        newname = szPath + temp + "." + ending;
 
         cout << oldname << endl;
         cout << newname << endl;
-        rename(oldname.c_str(),newname.c_str());
+        rename(oldname.c_str(), newname.c_str());
     }
 
 
